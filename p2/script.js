@@ -10,25 +10,38 @@ todosCursos.map((el)=>{
     })
 })
 
-const classDelete = (el)=>{
-    el.classList.remove("selecionado")
-}
+// const classDelete = (el)=>{
+//     el.classList.remove("selecionado")
+// }
+
+// btn1.addEventListener("click",()=>{
+//     const cursoSelecionados = [...document.querySelectorAll(".selecionado")]
+//     const selecionados = document.querySelector(".selecionado")
+//     if(caixa1.contains(selecionados)){
+//         cursoSelecionados.map((el)=>{
+//             caixa2.appendChild(el)
+//             classDelete(el)
+//         })
+//     }
+//     else{
+//         cursoSelecionados.map((el)=>{   
+//             caixa1.appendChild(el)
+//             classDelete(el)
+//         })
+//     }
+// })
 btn1.addEventListener("click",()=>{
     const cursoSelecionados = [...document.querySelectorAll(".selecionado")]
-    const selecionados = document.querySelector(".selecionado")
-    if(caixa1.contains(selecionados)){
+    const cursosNaoSelecionados = [...document.querySelectorAll(".curso:not(.selecionado)")]
         cursoSelecionados.map((el)=>{
             caixa2.appendChild(el)
-            classDelete(el)
         })
-    }
-    else{
-        cursoSelecionados.map((el)=>{   
+        cursosNaoSelecionados.map((el) =>{
             caixa1.appendChild(el)
-            classDelete(el)
         })
-    }
+        
 })
+
 
 
 
